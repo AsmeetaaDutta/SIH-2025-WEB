@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
 import { Home, LayoutDashboard, Code, Brain, Wifi, Users, ChevronDown, Play, Trophy, Zap, Star, Target } from 'lucide-react';
 
 const StudentDashboard = () => {
@@ -68,39 +70,50 @@ const StudentDashboard = () => {
                 </div>
                 <span className="text-xl font-bold text-gray-900">ShikshaPlay</span>
               </div>
-              
               <nav className="hidden md:flex space-x-1">
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
-                  <Home className="w-4 h-4" />
-                  <span>Home</span>
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium bg-blue-500 text-white flex items-center space-x-1">
-                  <LayoutDashboard className="w-4 h-4" />
-                  <span>Dashboard</span>
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
-                  STEM Subjects
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
-                  <Code className="w-4 h-4" />
-                  <span>Code Arena</span>
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
-                  Virtual Labs
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
-                  <Brain className="w-4 h-4" />
-                  <span>Smart Learning</span>
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
-                  <Wifi className="w-4 h-4" />
-                  <span>Sync Network</span>
-                </button>
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
-                  <Users className="w-4 h-4" />
-                  <span>Teacher Portal</span>
-                </button>
-              </nav>
+  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
+    <Home className="w-4 h-4" />
+    <span>Home</span>
+  </button>
+
+  <button className="px-3 py-2 rounded-md text-sm font-medium bg-blue-500 text-white flex items-center space-x-1">
+    <LayoutDashboard className="w-4 h-4" />
+    <span>Dashboard</span>
+  </button>
+
+  {/* ✅ Make STEM Subjects clickable */}
+  <Link 
+    to="/stem"
+    className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
+  >
+    STEM Subjects
+  </Link>
+
+  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
+    <Code className="w-4 h-4" />
+    <span>Code Arena</span>
+  </button>
+
+  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
+    Virtual Labs
+  </button>
+
+  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
+    <Brain className="w-4 h-4" />
+    <span>Smart Learning</span>
+  </button>
+
+  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
+    <Wifi className="w-4 h-4" />
+    <span>Sync Network</span>
+  </button>
+
+  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
+    <Users className="w-4 h-4" />
+    <span>Teacher Portal</span>
+  </button>
+</nav>
+
             </div>
 
             <div className="flex items-center space-x-4">

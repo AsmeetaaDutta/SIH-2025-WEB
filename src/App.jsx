@@ -6,8 +6,7 @@ import ChooseRole from "./screens/ChooseRole";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import StudentDashboard from "./screens/StudentDashboard";
-import ChooseSubject from "./screens/ChooseSubject";
-import StemSubjectsPage from "./screens/StemSubjectsPage";
+import Stem from "./screens/Stem";
 
 // Subjects
 import PhysicsChapter from "./Subjects/physics/PhysicsChapter";
@@ -27,11 +26,7 @@ const App = () => {
         {/* Dashboard */}
         <Route path="/dashboard" element={<StudentDashboard />} />
 
-        {/* Choose Subject Screen */}
-        <Route path="/choose-subject" element={<ChooseSubject />} />
-
-        {/* Dynamic Subject Page */}
-        <Route path="/subject/:subjectId" element={<StemSubjectsPage />} />
+       <Route path="/stem" element={<Stem />} />
 
         {/* Direct subject chapter routes */}
         <Route path="/physics" element={<PhysicsChapter />} />
