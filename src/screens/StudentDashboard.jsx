@@ -108,10 +108,14 @@ const StudentDashboard = () => {
     <span>Sync Network</span>
   </button>
 
-  <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1">
-    <Users className="w-4 h-4" />
-    <span>Teacher Portal</span>
-  </button>
+ <Link
+  to="/teacher"
+  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center space-x-1"
+>
+  <Users className="w-4 h-4" />
+  <span>Teacher Portal</span>
+</Link>
+
 </nav>
 
             </div>

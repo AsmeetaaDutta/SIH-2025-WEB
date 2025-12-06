@@ -7,6 +7,7 @@ import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import StudentDashboard from "./screens/StudentDashboard";
 import Stem from "./screens/Stem";
+import TeacherDashboard from "./screens/TeacherDashboard";
 
 // Subjects
 import PhysicsChapter from "./Subjects/physics/PhysicsChapter";
@@ -23,12 +24,14 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
-        {/* Dashboard */}
+        {/* Dashboards */}
         <Route path="/dashboard" element={<StudentDashboard />} />
+        <Route path="/teacher" element={<TeacherDashboard />} />
 
-       <Route path="/stem" element={<Stem />} />
+        {/* Stem Route */}
+        <Route path="/stem" element={<Stem />} />
 
-        {/* Direct subject chapter routes */}
+        {/* Subjects */}
         <Route path="/physics" element={<PhysicsChapter />} />
         <Route path="/biology" element={<BiologyChapters />} />
       </Routes>
